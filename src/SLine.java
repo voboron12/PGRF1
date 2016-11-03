@@ -15,23 +15,21 @@ public class SLine {
 	}
 
 	public void changeDirection() {
-		Point temp;
-		
+
 		if (a.getY() > b.getY()) {
+			Point temp;
 			temp = a;
 			a = b;
 			b = a;
 		}
 	}
-	
-	public boolean isIntersection(int y){
+
+	public boolean isIntersection(int y) {
 		return (a.getY() <= y || b.getY() >= y);
 	}
-	
-	public int getIntersection(int y){
-		
-		
-		
+
+	public int getIntersection(int y) {
+
 		return 0;
 	}
 }
