@@ -8,13 +8,14 @@ public class SeedFill extends Filler {
 							   	   {0xff, 0xff0000, 0xff, 0xff},
 							       {0xff, 0xff, 0xff0000, 0xff},
 							       {0xff, 0xff, 0xff, 0xff0000}};
-	public SeedFill(BufferedImage img, int color) {
+	public SeedFill(int color, BufferedImage img) {
+		super(color,img);
 		this.img = img;
 		this.color = color;
 	}
 	
 	public SeedFill(BufferedImage img){
-		this(img, 0x921181);
+		super(img);
 	}
 	
 	public void fill (int x, int y, int bgColor) {

@@ -26,7 +26,8 @@ public class Canvas {
 	private JFrame frame;
 	private JPanel panel;
 	private BufferedImage img;
-	private ArrayList<Point> listOfPoints = new ArrayList<>();
+	//private ArrayList<Point> listOfPoints = new ArrayList<>();
+	private PolyLine listOfPoints = new PolyLine();
 	int startX, startY;
 	LineRenderer lineRenderer;
 	CircleRenderer cr;
@@ -64,7 +65,7 @@ public class Canvas {
 			public void mouseReleased(MouseEvent e) {
 				
 				if(e.getButton() == MouseEvent.BUTTON1) {
-					listOfPoints.add(new Point(e.getX(), e.getY()));
+					listOfPoints.add(e.getX(), e.getY());
 					//lineRenderer.drawLineTrivial(startX, startY, e.getX(), e.getY());
 					clear(0x2f2f2f);
 					drawPolygon();

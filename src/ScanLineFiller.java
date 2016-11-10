@@ -1,12 +1,21 @@
 import java.awt.Point;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ScanLineFiller extends Filler {
 	
+	public ScanLineFiller(int color, BufferedImage img){
+		super(color,img);
+	}
+	
+	public ScanLineFiller(BufferedImage img){
+		super(img);
+	}
+	
 	private List<SLine> lines = new ArrayList<SLine>();
 	
-	public void fill(List<Point> points) {
+	public void fill(PolyLine points) {
 		
 		int max = (int)points.get(0).getY();
 		int min = (int)points.get(0).getY();
